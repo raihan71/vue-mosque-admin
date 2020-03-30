@@ -21,7 +21,7 @@
                           <div class="card-header">
                             <span class="cut-text">{{ngaji.title}}</span>
                           </div>
-                          <div v-html="ngaji.desc" class="card-body cut-text">
+                          <div class="card-body cut-text">{{ngaji.desc | truncate(100)}}
                           </div>
                           <div class="card-footer">
                             <div class="btn-group float-right">
@@ -57,7 +57,7 @@ export default {
         this.kajian.push({
           key: doc.id,
           title: doc.data().title,
-          desc: doc.data().desc
+          desc: doc.data().desc.replace(/<[^>]+>/g,'')
         });
       })
     })

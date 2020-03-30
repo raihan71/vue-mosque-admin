@@ -21,7 +21,8 @@
                           <div class="card-header">
                             <span>{{info.title}}</span>
                           </div>
-                          <div v-html="info.desc" class="card-body">
+                          <div class="card-body">
+                            {{info.desc | truncate(100)}}
                           </div>
                           <div class="card-footer">
                             <div class="btn-group float-right">
@@ -56,7 +57,7 @@ export default {
         this.news.push({
           key: doc.id,
           title: doc.data().title,
-          desc: doc.data().desc
+          desc: doc.data().desc.replace(/<[^>]+>/g,'')
         })
       })
     })

@@ -3,8 +3,10 @@ import firebase from 'firebase'
 import App from './App.vue'
 import router from './router'
 import VueSimpleAlert from "vue-simple-alert"
+import VueTruncateFilter from 'vue-truncate-filter'
 
 Vue.use(VueSimpleAlert);
+Vue.use(VueTruncateFilter);
 
 Vue.config.productionTip = false
 let app = ''
