@@ -523,4 +523,4 @@ export default   [
       value:"BPD Sumatera Utara", 
       text:"PT. BPD Sumatera Utara"
   }       
-]
+];
